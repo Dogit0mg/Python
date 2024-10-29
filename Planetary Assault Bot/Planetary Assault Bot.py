@@ -3,6 +3,10 @@ import keyboard
 import win32api
 import win32con
 
+# Click positions were acquired using "Python IDLE" with the following code
+#import pyautogui
+#pyautogui.displayMousePosition()
+
 CENTER = (1243, 533) # two skills requires you to aim, so we need the center position to aim them
 click_positions = [
     (631, 330), (702, 330), (772, 330),
