@@ -6,18 +6,18 @@ print("Welcome, to the quiz!")
 def start_game():
 
     playing = input("Do you wish to start a round? (yes/no) ")
-    playing = playing.upper()
+    playing = playing.upper() # Makes the answer upper case to avoid errors
     if playing == "YES":
         print("Good luck! ")
-    else:
+    else: # If the answer is different than "YES" quit the program
         print("Okay :( ")
         quit()
 
     # Starts the points variable
     points = 0
 
-    answer = input("1. What does 'CPU' stand for? ").lower()
-    if answer == "central processing unit":
+    answer = input("1. What does 'CPU' stand for? ").lower() # Makes the input lower case to avoid errors
+    if answer == "central processing unit": # If the answer is correct -> add 1 point to the "points" variable
         points = points + 1
         print("Correct :) ")
     else:
@@ -31,7 +31,7 @@ def start_game():
         print("Incorrect :( 'GPU' stands for 'graphical processing unit'")
 
     answer = input("3. What's the result of 1+1? ").lower()
-    if answer == "2" or answer == "two":
+    if answer == "2" or answer == "two": # Two different types of answers that are essencialy the same thing
         points = points + 1
         print("Correct :) ")
     else:
@@ -51,7 +51,7 @@ def start_game():
     else:
         print("Incorrect :( the corolla is the fifth car with the most sales in the world!")
 
-    return points
+    return points # Returns the total points the player got
 
 
 def main():
@@ -59,7 +59,7 @@ def main():
 
     while True:
         points = start_game()  # Get the score from start_game
-        print(f"You got {points} correct answers out of {total_points} total.")
+        print(f"You got {points} correct answers out of {total_points} total.") # Uses "f" to make the code easier to type
 
         # Ask if the player wants to play again
         play_again = input("Do you wish to play again? (yes/no) ").lower()
